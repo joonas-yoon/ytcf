@@ -1,20 +1,27 @@
-function hideNotKorComments(){
-  let e = document.querySelectorAll('ytd-comment-thread-renderer:not(.completed)');
-  Array.from(e).forEach((v, i) => {
-    let text = v.querySelector('#expander').innerText || '';
-    chrome.i18n.detectLanguage(text, function (result) {
-      if (!result.isReliable) return;
-      console.log(result, text);
-      let lang = result.languages[0];
-      if (lang.language !== 'ko') {
-        v.remove();
-      } else {
-        v.classList.add('completed');
-      }
-    });
-  });
+function hide(e, result) {
+  // if (!result.isReliable) return;
+  const lang = result.languages[0];
+  // TODO: set language from option
+  if (lang.language !== 'ko') {
+    e.classList.add('hidden');
+    e.parentNode.classList.add('hidden');
+  } else {
+    e.classList.add('filtered');
+  }
+}
+
+function hideComments(){
+  const e = document.querySelectorAll('#comment.ytd-comment-thread-renderer:not(.filtered)');
+  for(let i = 0; i < e.length; ++i){
+    const _e = e[i];
+    chrome.i18n.detectLanguage(
+      _e.querySelector('#content-text.ytd-comment-renderer').innerText,
+      (result) => { hide(_e, result); }
+    );
+  }
+  setTimeout(hideComments, 1000);
 }
 
 (function(){
-  setInterval(hideNotKorComments, 1000);
+  hideComments();
 })();
