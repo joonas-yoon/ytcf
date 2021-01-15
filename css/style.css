@@ -16,7 +16,7 @@
 }
 .ytcf-switch-label::before,
 .ytcf-switch-label::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   cursor: pointer;
@@ -51,7 +51,8 @@
   margin: 1em 0;
   align-items: center;
 }
-.ytcf-switch, .ytcf-label {
+.ytcf-switch,
+.ytcf-label {
   display: inline-block;
 }
 .ytcf-label {
