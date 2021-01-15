@@ -1,0 +1,64 @@
+.ytcf-switch {
+  position: relative;
+  display: inline-block;
+}
+.ytcf-switch-input {
+  display: none;
+}
+.ytcf-switch-label {
+  display: block;
+  width: 48px;
+  height: 24px;
+  text-indent: -150%;
+  clip: rect(0 0 0 0);
+  color: transparent;
+  user-select: none;
+}
+.ytcf-switch-label::before,
+.ytcf-switch-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.ytcf-switch-label::before {
+  width: 100%;
+  height: 100%;
+  background-color: #dedede;
+  border-radius: 9999em;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+.ytcf-switch-label::after {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease;
+}
+.ytcf-switch-input:checked + .ytcf-switch-label::before {
+  background-color: #89c12d;
+}
+.ytcf-switch-input:checked + .ytcf-switch-label::after {
+  left: 24px;
+}
+.ytcf-wrapper {
+  display: flex;
+  margin: 1em 0;
+  align-items: center;
+}
+.ytcf-switch, .ytcf-label {
+  display: inline-block;
+}
+.ytcf-label {
+  font-size: 12pt;
+  margin-left: 10px;
+}
+
+.ytcf-enabled .ytd-comment-thread-renderer {
+  display: none;
+}
