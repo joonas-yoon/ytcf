@@ -62,3 +62,14 @@
 .ytcf-enabled .ytd-comment-thread-renderer {
   display: none;
 }
+
+.ytcf-select {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.ytcf-select > select {
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

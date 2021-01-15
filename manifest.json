@@ -1,7 +1,7 @@
 {
   "name": "Youtube Comment Language Filter",
   "description": "Filter comments in your language only",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "manifest_version": 2,
   "content_scripts": [
     {
@@ -11,6 +11,7 @@
       ],
       "all_frames": true,
       "js": [
+        "js/langs.js",
         "js/bg.js"
       ],
       "css": [
