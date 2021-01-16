@@ -321,14 +321,4 @@ const Language = {
     'zh-CN': 'Chinese',
     zu: 'Zulu',
   },
-  saveLanguageSetting: function (language, callback) {
-    chrome.storage.sync.set({ 'ytcf-lang': language }, function () {
-      callback(language);
-    });
-  },
-  loadLanguageSetting: function (callback) {
-    chrome.storage.sync.get('ytcf-lang', function (items) {
-      callback(items['ytcf-lang']);
-    });
-  },
 };

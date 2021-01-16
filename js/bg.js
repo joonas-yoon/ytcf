@@ -138,11 +138,11 @@ function createSelectLangs(wrapper) {
     select.appendChild(opt);
   }
   select.addEventListener('change', function (evt) {
-    Language.saveLanguageSetting(evt.target.value, applyCSS);
+    Config.save('lang', evt.target.value, applyCSS);
   });
   node.appendChild(select);
 
-  Language.loadLanguageSetting(applyCSS);
+  Config.load('lang', applyCSS);
 
   return node;
 }
