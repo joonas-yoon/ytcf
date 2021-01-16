@@ -95,17 +95,26 @@ function createButtonEnable(container) {
   inp.setAttribute('id', 'ytcf-switch');
   inp.setAttribute('type', 'checkbox');
   inp.setAttribute('class', 'ytcf-switch-input');
+  const enabledClass = 'ytcf-enabled';
   inp.addEventListener(
     'change',
     function (e) {
-      if (e.target.checked) {
-        container.classList.add('ytcf-enabled');
-      } else {
-        container.classList.remove('ytcf-enabled');
-      }
+      Config.save('enable', e.target.checked, (checked) => {
+        if (checked) {
+          container.classList.add(enabledClass);
+        } else {
+          container.classList.remove(enabledClass);
+        }
+      });
     },
     false
   );
+  Config.load('enable', (checked) => {
+    inp.checked = checked;
+    if (checked) {
+      container.classList.add(enabledClass);
+    }
+  });
 
   const lab = document.createElement('label');
   lab.setAttribute('for', inp.id);
@@ -149,7 +158,6 @@ function createSelectLangs(wrapper) {
 
 function applyCSS(langCode) {
   const style = document.getElementById('ytcf-css');
-  console.log('apply', langCode, style);
   const langClass = langCode ? '.' + langCode : '';
   if (langCode) {
     document.getElementById('ytcf-lang-' + langCode).selected = true;
