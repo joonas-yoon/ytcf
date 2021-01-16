@@ -18,7 +18,7 @@
     },
     "globals": {
       "chrome": false,
-      "i18nLanguages": false
+      "Language": false
     }
   }
   

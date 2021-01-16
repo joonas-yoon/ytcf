@@ -1,13 +1,13 @@
 {
   "name": "Youtube Comment Language Filter",
   "description": "Filter comments in language you want",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "manifest_version": 2,
   "content_scripts": [
     {
       "matches": ["http://*.youtube.com/*", "https://*.youtube.com/*"],
       "all_frames": true,
-      "js": ["js/build/langs.js", "js/build/bg.js"],
+      "js": ["js/langs.js", "js/bg.js"],
       "css": ["css/style.css"]
     }
   ],
@@ -17,5 +17,5 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "permissions": ["tabs", "activeTab"]
+  "permissions": ["storage"]
 }

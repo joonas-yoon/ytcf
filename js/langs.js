@@ -1,4 +1,4 @@
-const i18nLanguages = {
+const Language = {
   asTable: [
     ['ENGLISH', 'en', 'eng', null],
     ['DANISH', 'da', 'dan', null],
@@ -320,5 +320,15 @@ const i18nLanguages = {
     zh: 'Chinese',
     'zh-CN': 'Chinese',
     zu: 'Zulu',
+  },
+  saveLanguageSetting: function (language, callback) {
+    chrome.storage.sync.set({ 'ytcf-lang': language }, function () {
+      callback(language);
+    });
+  },
+  loadLanguageSetting: function (callback) {
+    chrome.storage.sync.get('ytcf-lang', function (items) {
+      callback(items['ytcf-lang']);
+    });
   },
 };

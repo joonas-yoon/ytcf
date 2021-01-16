@@ -123,27 +123,39 @@ function createSelectLangs(wrapper) {
 
   const select = document.createElement('select');
   select.appendChild(document.createElement('option'));
-  const langCodes = Object.keys(i18nLanguages.asDict);
+  const langCodes = Object.keys(Language.asDict);
   langCodes.sort(function (x, y) {
-    return ('' + i18nLanguages.asDict[x].attr).localeCompare(
-      i18nLanguages.asDict[y].attr
+    return ('' + Language.asDict[x].attr).localeCompare(
+      Language.asDict[y].attr
     );
   });
   for (let i = 0; i < langCodes.length; ++i) {
     const opt = document.createElement('option');
-    opt.setAttribute('value', langCodes[i]);
-    opt.innerText = i18nLanguages.asDict[langCodes[i]];
+    const lang = langCodes[i];
+    opt.setAttribute('value', lang);
+    opt.setAttribute('id', 'ytcf-lang-' + lang);
+    opt.innerText = Language.asDict[lang];
     select.appendChild(opt);
   }
   select.addEventListener('change', function (evt) {
-    const style = document.getElementById('ytcf-css');
-    const langClass = evt.target.value ? '.' + evt.target.value : '';
-    style.innerText =
-      '.ytd-comment-thread-renderer' + langClass + '{display:block!important;}';
+    Language.saveLanguageSetting(evt.target.value, applyCSS);
   });
   node.appendChild(select);
 
+  Language.loadLanguageSetting(applyCSS);
+
   return node;
+}
+
+function applyCSS(langCode) {
+  const style = document.getElementById('ytcf-css');
+  console.log('apply', langCode, style);
+  const langClass = langCode ? '.' + langCode : '';
+  if (langCode) {
+    document.getElementById('ytcf-lang-' + langCode).selected = true;
+  }
+  style.innerText =
+    '.ytd-comment-thread-renderer' + langClass + '{display:block!important;}';
 }
 
 (function () {
