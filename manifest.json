@@ -7,7 +7,7 @@
     {
       "matches": ["http://*.youtube.com/*", "https://*.youtube.com/*"],
       "all_frames": true,
-      "js": ["js/langs.js", "js/bg.js", "js/config.js"]
+      "js": ["js/build/langs.js", "js/build/bg.js", "js/build/config.js"]
     }
   ],
   "web_accessible_resources": ["css/style.css"],
