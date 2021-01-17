@@ -42,6 +42,16 @@ It will format the codes and show warnings and errors.
 
 This extension detects language using [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/) and it is also [a part](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n) of javascript APIs for browser extension by Mozilla.
 
+## Contribute
+
+Welcome!
+
+If you are reading this document then you are interested in contributing to this repository.
+
+All contributions are welcome: documentation code, fetures, even translation!
+
+Here is helpful link to who hard to contribute - [How to contribute to open source](https://github.com/freeCodeCamp/how-to-contribute-to-open-source/blob/master/README.md)
+
 ## License
 
 [YouTube Comment Filter](https://github.com/joonas-yoon/ytcf/) are released under [MIT license](https://github.com/joonas-yoon/ytcf/blob/master/LICENSE).
