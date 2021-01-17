@@ -1,0 +1,164 @@
+{
+  "ext_name": {
+    "message": "YouTube Comment Language Filter",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "ext_shortname": {
+    "message": "YTCF",
+    "description": "The short title of the application, displayed in the web store."
+  },
+  "ext_description": {
+    "message": "Filter comments in language you want",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "msg_enable": {
+    "message": "Enable Comment Filter"
+  },
+  "lang_ar": {
+    "message": "Arabic"
+  },
+  "lang_am": {
+    "message": "Amharic"
+  },
+  "lang_bg": {
+    "message": "Bulgarian"
+  },
+  "lang_bn": {
+    "message": "Bengali"
+  },
+  "lang_ca": {
+    "message": "Catalan"
+  },
+  "lang_cs": {
+    "message": "Czech"
+  },
+  "lang_da": {
+    "message": "Danish"
+  },
+  "lang_de": {
+    "message": "German"
+  },
+  "lang_el": {
+    "message": "Greek"
+  },
+  "lang_en": {
+    "message": "English"
+  },
+  "lang_es": {
+    "message": "Spanish"
+  },
+  "lang_et": {
+    "message": "Estonian"
+  },
+  "lang_fa": {
+    "message": "Persian"
+  },
+  "lang_fi": {
+    "message": "Finnish"
+  },
+  "lang_fil": {
+    "message": "Filipino"
+  },
+  "lang_fr": {
+    "message": "French"
+  },
+  "lang_gu": {
+    "message": "Gujarati"
+  },
+  "lang_he": {
+    "message": "Hebrew"
+  },
+  "lang_hi": {
+    "message": "Hindi"
+  },
+  "lang_hr": {
+    "message": "Croatian"
+  },
+  "lang_hu": {
+    "message": "Hungarian"
+  },
+  "lang_id": {
+    "message": "Indonesian"
+  },
+  "lang_it": {
+    "message": "Italian"
+  },
+  "lang_ja": {
+    "message": "Japanese"
+  },
+  "lang_kn": {
+    "message": "Kannada"
+  },
+  "lang_ko": {
+    "message": "Korean"
+  },
+  "lang_lt": {
+    "message": "Lithuanian"
+  },
+  "lang_lv": {
+    "message": "Latvian"
+  },
+  "lang_ml": {
+    "message": "Malayalam"
+  },
+  "lang_mr": {
+    "message": "Marathi"
+  },
+  "lang_ms": {
+    "message": "Malay"
+  },
+  "lang_nl": {
+    "message": "Dutch"
+  },
+  "lang_no": {
+    "message": "Norwegian"
+  },
+  "lang_pl": {
+    "message": "Polish"
+  },
+  "lang_pt": {
+    "message": "Portuguese"
+  },
+  "lang_ro": {
+    "message": "Romanian"
+  },
+  "lang_ru": {
+    "message": "Russian"
+  },
+  "lang_sk": {
+    "message": "Slovak"
+  },
+  "lang_sl": {
+    "message": "Slovenian"
+  },
+  "lang_sr": {
+    "message": "Serbian"
+  },
+  "lang_sv": {
+    "message": "Swedish"
+  },
+  "lang_sw": {
+    "message": "Swahili"
+  },
+  "lang_ta": {
+    "message": "Tamil"
+  },
+  "lang_te": {
+    "message": "Telugu"
+  },
+  "lang_th": {
+    "message": "Thai"
+  },
+  "lang_tr": {
+    "message": "Turkish"
+  },
+  "lang_uk": {
+    "message": "Ukrainian"
+  },
+  "lang_vi": {
+    "message": "Vietnamese"
+  },
+  "lang_zh": {
+    "message": "Chinese"
+  }
+}

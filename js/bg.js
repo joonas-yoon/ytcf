@@ -79,7 +79,7 @@ function injectUI(container) {
 
   const title = document.createElement('div');
   title.setAttribute('class', 'ytcf-label');
-  title.innerText = 'Enable Language Filter';
+  title.innerText = chrome.i18n.getMessage('msg_enable');
   wrapper.appendChild(title);
 
   container.insertBefore(wrapper, container.firstChild);
@@ -127,29 +127,41 @@ function createButtonEnable(container) {
 }
 
 function createSelectLangs(wrapper) {
+  function getLanguages(callback) {
+    const langCodes = Object.keys(Language.asDict);
+    const result = [];
+    for (let i = 0; i < langCodes.length; ++i) {
+      result.push({
+        code: langCodes[i],
+        name: chrome.i18n.getMessage('lang_' + langCodes[i]),
+      });
+    }
+    result.sort(function (x, y) {
+      return ('' + x.name).localeCompare(y.name);
+    });
+    callback(result);
+  }
+
   const node = document.createElement('div');
   node.setAttribute('class', 'ytcf-select');
 
   const select = document.createElement('select');
   select.appendChild(document.createElement('option'));
-  const langCodes = Object.keys(Language.asDict);
-  langCodes.sort(function (x, y) {
-    return ('' + Language.asDict[x].attr).localeCompare(
-      Language.asDict[y].attr
-    );
-  });
-  for (let i = 0; i < langCodes.length; ++i) {
-    const opt = document.createElement('option');
-    const lang = langCodes[i];
-    opt.setAttribute('value', lang);
-    opt.setAttribute('id', 'ytcf-lang-' + lang);
-    opt.innerText = Language.asDict[lang];
-    select.appendChild(opt);
-  }
   select.addEventListener('change', function (evt) {
     Config.save('lang', evt.target.value, applyCSS);
   });
   node.appendChild(select);
+
+  getLanguages((langCodes) => {
+    console.log(langCodes);
+    langCodes.forEach((v, i) => {
+      const opt = document.createElement('option');
+      opt.setAttribute('value', v.code);
+      opt.setAttribute('id', 'ytcf-lang-' + v.code);
+      opt.innerText = v.name;
+      select.appendChild(opt);
+    });
+  });
 
   Config.load('lang', applyCSS);
 
