@@ -1,6 +1,6 @@
-# YTCF
+# YTCF <img align="right" src="icons/icon48.png"/>
 
-![Latest version](https://img.shields.io/chrome-web-store/v/jdiikkhlhlgndjllhoinidnkbgkjfepe) ![Chrome 55+](https://img.shields.io/badge/chrome-55%2B-green]) ![Whale 1.4+](https://img.shields.io/badge/whale-1.4%2B-green])
+![Latest version](https://img.shields.io/chrome-web-store/v/jdiikkhlhlgndjllhoinidnkbgkjfepe) ![Chrome 55+](https://img.shields.io/badge/chrome-55%2B-green]) ![Whale 1.4+](https://img.shields.io/badge/whale-1.4%2B-green]) ![Safari unsupported](https://img.shields.io/badge/safari-unsupported-lightgray)
 
 YouTube Comments Language Filter
 
