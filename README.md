@@ -40,7 +40,7 @@ It will format the codes and show warnings and errors.
 
 ## How to detect language?
 
-This extension detects language using [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/) and it is also [a part](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n) of javascript APIs for browser extension by Mozilla.
+This extension detects language using [`i18n.detectLanguage()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage) and it is also [a part](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n) of javascript APIs for browser extension by Mozilla.
 
 ## Contribute
 
