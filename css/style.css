@@ -60,10 +60,6 @@
   margin-left: 10px;
 }
 
-.ytcf-enabled .ytd-comment-thread-renderer {
-  display: none;
-}
-
 .ytcf-select {
   margin-left: 10px;
   margin-bottom: 3px;
@@ -73,4 +69,56 @@
   height: 24px;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+
+.ytcf-enabled .ytd-comment-thread-renderer.ar,
+.ytcf-enabled .ytd-comment-thread-renderer.am,
+.ytcf-enabled .ytd-comment-thread-renderer.bg,
+.ytcf-enabled .ytd-comment-thread-renderer.bn,
+.ytcf-enabled .ytd-comment-thread-renderer.ca,
+.ytcf-enabled .ytd-comment-thread-renderer.cs,
+.ytcf-enabled .ytd-comment-thread-renderer.da,
+.ytcf-enabled .ytd-comment-thread-renderer.de,
+.ytcf-enabled .ytd-comment-thread-renderer.el,
+.ytcf-enabled .ytd-comment-thread-renderer.en,
+.ytcf-enabled .ytd-comment-thread-renderer.es,
+.ytcf-enabled .ytd-comment-thread-renderer.et,
+.ytcf-enabled .ytd-comment-thread-renderer.fa,
+.ytcf-enabled .ytd-comment-thread-renderer.fi,
+.ytcf-enabled .ytd-comment-thread-renderer.fil,
+.ytcf-enabled .ytd-comment-thread-renderer.fr,
+.ytcf-enabled .ytd-comment-thread-renderer.gu,
+.ytcf-enabled .ytd-comment-thread-renderer.he,
+.ytcf-enabled .ytd-comment-thread-renderer.hi,
+.ytcf-enabled .ytd-comment-thread-renderer.hr,
+.ytcf-enabled .ytd-comment-thread-renderer.hu,
+.ytcf-enabled .ytd-comment-thread-renderer.id,
+.ytcf-enabled .ytd-comment-thread-renderer.it,
+.ytcf-enabled .ytd-comment-thread-renderer.ja,
+.ytcf-enabled .ytd-comment-thread-renderer.kn,
+.ytcf-enabled .ytd-comment-thread-renderer.ko,
+.ytcf-enabled .ytd-comment-thread-renderer.lt,
+.ytcf-enabled .ytd-comment-thread-renderer.lv,
+.ytcf-enabled .ytd-comment-thread-renderer.ml,
+.ytcf-enabled .ytd-comment-thread-renderer.mr,
+.ytcf-enabled .ytd-comment-thread-renderer.ms,
+.ytcf-enabled .ytd-comment-thread-renderer.nl,
+.ytcf-enabled .ytd-comment-thread-renderer.no,
+.ytcf-enabled .ytd-comment-thread-renderer.pl,
+.ytcf-enabled .ytd-comment-thread-renderer.pt,
+.ytcf-enabled .ytd-comment-thread-renderer.ro,
+.ytcf-enabled .ytd-comment-thread-renderer.ru,
+.ytcf-enabled .ytd-comment-thread-renderer.sk,
+.ytcf-enabled .ytd-comment-thread-renderer.sl,
+.ytcf-enabled .ytd-comment-thread-renderer.sr,
+.ytcf-enabled .ytd-comment-thread-renderer.sv,
+.ytcf-enabled .ytd-comment-thread-renderer.sw,
+.ytcf-enabled .ytd-comment-thread-renderer.ta,
+.ytcf-enabled .ytd-comment-thread-renderer.te,
+.ytcf-enabled .ytd-comment-thread-renderer.th,
+.ytcf-enabled .ytd-comment-thread-renderer.tr,
+.ytcf-enabled .ytd-comment-thread-renderer.uk,
+.ytcf-enabled .ytd-comment-thread-renderer.vi,
+.ytcf-enabled .ytd-comment-thread-renderer.zh {
+  display: none;
 }

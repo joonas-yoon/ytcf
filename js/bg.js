@@ -6,14 +6,18 @@ function addClassLang(e, result) {
     langs += ' ' + result.languages[i].language;
   }
   const reliableClass = 'reliable';
-  e.setAttribute(
-    'class',
-    e.getAttribute('class') +
-      ' filtered ' +
-      langs +
-      ' ' +
-      (result.isReliable ? reliableClass : '')
-  );
+  function _addClass(el) {
+    el.setAttribute(
+      'class',
+      el.getAttribute('class') +
+        ' filtered ' +
+        langs +
+        ' ' +
+        (result.isReliable ? reliableClass : '')
+    );
+  }
+  _addClass(e); // comment text
+  _addClass(e.parentElement.children[1]); // replies (slibling)
 }
 
 function addClassToCmt(comments, checked) {
@@ -175,7 +179,9 @@ function applyCSS(langCode) {
     document.getElementById('ytcf-lang-' + langCode).selected = true;
   }
   style.innerText =
-    '.ytd-comment-thread-renderer' + langClass + '{display:block!important;}';
+    '.ytcf-enabled .ytd-comment-thread-renderer' +
+    langClass +
+    '{display:block!important;}';
 }
 
 (function () {
